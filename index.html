@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculator with Toggle History</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calculator-wrapper">
+
+    <!-- Calculator -->
+    <div class="calculator-container">
+      <div class="calculator">
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+        <input type="text" id="display" readonly />
+
+        <div class="buttons">
+          <button class="btn" data-value="7">7</button>
+          <button class="btn" data-value="8">8</button>
+          <button class="btn" data-value="9">9</button>
+          <button class="btn operator" data-value="/">/</button>
+
+          <button class="btn" data-value="4">4</button>
+          <button class="btn" data-value="5">5</button>
+          <button class="btn" data-value="6">6</button>
+          <button class="btn operator" data-value="*">*</button>
+
+          <button class="btn" data-value="1">1</button>
+          <button class="btn" data-value="2">2</button>
+          <button class="btn" data-value="3">3</button>
+          <button class="btn operator" data-value="-">-</button>
+
+          <button class="btn" data-value="0">0</button>
+          <button class="btn" data-value=".">.</button>
+          <button class="btn clear">C</button>
+          <button class="btn operator" data-value="+">+</button>
+
+          <button class="btn equal">=</button>
+        </div>
+
+        <!-- Show History Button -->
+        <button id="toggle-history" class="nav-btn" style="margin-top: 20px; display: flex; align-items: center; gap: 8px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/1827/1827369.png" alt="history icon" width="20" height="20">
+          History
+        </button>
+        
+      </div>
+    </div>
+
+    <!-- Hidden History Box -->
+    <div id="history-box" class="history-box hidden"><br>
+  <button id="close-history" class="close-btn">❌CLOSE</button><br><br>
+  <h3>Calculation History</h3>
+  <ul id="history-list" class="history"></ul>
+</div>
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
